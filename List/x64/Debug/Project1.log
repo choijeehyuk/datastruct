@@ -1,0 +1,11 @@
+﻿  ArrayList.c
+  main.c
+C:\Users\pc\Desktop\datastruct\Project1\main.c(60,23): warning C4133: 'function': incompatible types - from 'NameCard *' to 'List *'
+C:\Users\pc\Desktop\datastruct\Project1\main.c(67,24): warning C4133: 'function': incompatible types - from 'NameCard *' to 'List *'
+  NameCard.c
+C:\Users\pc\Desktop\datastruct\Project1\NameCard.c(14,8): warning C4013: 'printf' undefined; assuming extern returning int
+C:\Users\pc\Desktop\datastruct\Project1\NameCard.c(23,24): warning C4047: 'function': 'char *' differs in levels of indirection from 'char (*)[30]'
+C:\Users\pc\Desktop\datastruct\Project1\NameCard.c(23,11): warning C4024: 'strcpy_s': different types for formal and actual parameter 1
+  Generating Code...
+C:\Users\pc\Desktop\datastruct\Project1\NameCard.c(24): warning C4716: 'ChangePhoneNum': must return a value
+  Project1.vcxproj -> C:\Users\pc\Desktop\datastruct\Project1\x64\Debug\Project1.exe
