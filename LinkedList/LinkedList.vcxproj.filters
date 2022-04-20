@@ -33,12 +33,21 @@
     <ClCompile Include="PointListMain.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CLinkedList.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CListMain.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DLinkedList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Point.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLinkedList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

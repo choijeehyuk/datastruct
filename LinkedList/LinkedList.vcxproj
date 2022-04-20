@@ -141,12 +141,15 @@
   <ItemGroup>
     <ClCompile Include="AddAtTailLinkedList.c" />
     <ClCompile Include="AddDummyNode.c" />
+    <ClCompile Include="CLinkedList.c" />
+    <ClCompile Include="CListMain.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="DLinkedList.c" />
     <ClCompile Include="Point.c" />
     <ClCompile Include="PointListMain.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CLinkedList.h" />
     <ClInclude Include="DLinkedList.h" />
     <ClInclude Include="Point.h" />
   </ItemGroup>

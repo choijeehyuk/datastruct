@@ -9,7 +9,7 @@ typedef struct _node
 } Node;
 
 //int AddAtTailLinkedList(void)
-int main(void)
+int main5(void)
 {
 	Node* head = NULL;
 	Node* tail = NULL;
