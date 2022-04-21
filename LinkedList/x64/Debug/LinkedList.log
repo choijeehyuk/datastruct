@@ -1,2 +1,5 @@
 ﻿  CListMain.c
+C:\Users\pc\Desktop\datastruct\LinkedList\CListMain.c(66,7): warning C4101: 'result': unreferenced local variable
+C:\Users\pc\Desktop\datastruct\LinkedList\CListMain.c(42,7): warning C4101: 'data': unreferenced local variable
+C:\Users\pc\Desktop\datastruct\LinkedList\CListMain.c(37): warning C4715: 'confirmPartyPost': not all control paths return a value
   LinkedList.vcxproj -> C:\Users\pc\Desktop\datastruct\x64\Debug\LinkedList.exe

@@ -1,70 +1,70 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "CLinkedList.h"
+
+Data confirmPartyPost(List* partyPostOrder, char* name, int num)
+{
+	Data data;
+
+	if (LFirst(partyPostOrder, &data))
+	{
+		if (strcmp(name, data.name) == 0)
+		{
+			for (int i = 0; i < num; ++i)
+			{
+				LNext(partyPostOrder, &data);
+			}
+			return data;
+		}
+		else
+		{
+			while (LNext(partyPostOrder, &data))
+			{
+				if (strcmp(name, data.name) == 0)
+				{
+					for (int i = 0; i < num; ++i)
+					{
+						LNext(partyPostOrder, &data);
+					}
+					return data;
+				}
+			}
+		}
+	}
+	
+}
 
 int main(void)
 {
-	List list;
+	List partyPostOrder;
 	Data data;
-	ListInit(&list);
+	ListInit(&partyPostOrder);
 
-	LInsert(&list, 2);
-	LFirst(&list, &data);
-	LRemove(&list);
+	Data* employee1 = (Data*)malloc(sizeof(Data));
+	employee1->num = 1;
+	employee1->name = "sungsu";
 
-	LInsert(&list, 3);
-	LInsert(&list, 4);
-	LInsert(&list, 5);
-	LInsertFront(&list, 2);
-	LInsertFront(&list, 1);
+	Data* employee2 = (Data*)malloc(sizeof(Data));
+	employee2->num = 2;
+	employee2->name = "june";
 
-	printf("current item count : %d\n", LCount(&list));
+	Data* employee3 = (Data*)malloc(sizeof(Data));
+	employee3->num = 3;
+	employee3->name = "jee";
 
-	if (LFirst(&list, &data))
-	{
-		printf("%d ", data);
+	Data* employee4 = (Data*)malloc(sizeof(Data));
+	employee4->num = 4;
+	employee4->name = "su";
 
-		for (int i = 0; i < LCount(&list) * 3 - 1; ++i)
-		{
-			LNext(&list, &data);
-			printf("%d ", data);
-		}
-	}
+	LInsert(&partyPostOrder, *employee1);
+	LInsert(&partyPostOrder, *employee2);
+	LInsert(&partyPostOrder, *employee3);
+	LInsert(&partyPostOrder, *employee4);
 
-	printf("\n\n");
-
-	int nodeNum = LCount(&list);
-
-	if (nodeNum != 0)
-	{
-		LFirst(&list, &data);
-		if (data % 2 == 0)
-			LRemove(&list);
-
-		for (int i = 0; i < nodeNum - 1; ++i)
-		{
-			LNext(&list, &data);
-			if (data % 2 == 0)
-				LRemove(&list);
-		}
-
-	}
-
-	printf("current item count : %d\n", LCount(&list));
-
-	if (LFirst(&list, &data))
-	{
-		printf("%d ", data);
-
-		for (int i = 0; i < LCount(&list) - 1; ++i)
-		{
-			if (LNext(&list, &data))
-				printf("%d ", data);
-		}
-	}
-
-	printf("\n\n");
+	Data result = confirmPartyPost(&partyPostOrder, "su", 1);
 
 	return 0;
 }
+
