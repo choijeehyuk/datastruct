@@ -1,10 +1,11 @@
 #include <stdio.h>
-#include "DoublyLinkedList.h"
+#include <stdlib.h>
+#include "DoublyLinkedListWithDummy.h"
 
 int main()
 {
 	List list;
-	Data data;
+	int data;
 	ListInit(&list);
 
 	LInsert(&list, 1);
@@ -20,13 +21,34 @@ int main()
 	{
 		printf("%d ", data);
 		while (LNext(&list, &data))
+		{
 			printf("%d ", data);
-
-		while (LPrevious(&list, &data))
-			printf("%d ", data);
-
-		printf("\n\n");
+		}
+		printf("\n");
 	}
+
+	if (LFirst(&list, &data))
+	{
+		if (data % 2 == 0)
+			LRemove(&list);
+
+		while (LNext(&list, &data))
+		{
+			if (data % 2 == 0)
+				LRemove(&list);
+		}
+	}
+
+	if (LFirst(&list, &data))
+	{
+		printf("%d ", data);
+		while (LNext(&list, &data))
+		{
+			printf("%d ", data);
+		}
+		printf("\n");
+	}
+
 
 	return 0;
 }
