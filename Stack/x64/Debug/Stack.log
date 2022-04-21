@@ -1,0 +1,3 @@
+﻿  CLinkedList.c
+C:\Users\pc\Desktop\DataStruct\Stack\CLinkedList.c(27): warning C4715: 'LFirst': not all control paths return a value
+  Stack.vcxproj -> C:\Users\pc\Desktop\DataStruct\x64\Debug\Stack.exe
