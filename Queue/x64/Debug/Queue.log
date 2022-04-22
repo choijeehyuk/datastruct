@@ -1,0 +1,7 @@
+﻿  main.c
+C:\Users\pc\Desktop\DataStruct\Queue\main.c(9,14): warning C4020: 'Enqueue': too many actual parameters
+C:\Users\pc\Desktop\DataStruct\Queue\main.c(10,14): warning C4020: 'Enqueue': too many actual parameters
+C:\Users\pc\Desktop\DataStruct\Queue\main.c(11,14): warning C4020: 'Enqueue': too many actual parameters
+C:\Users\pc\Desktop\DataStruct\Queue\main.c(12,14): warning C4020: 'Enqueue': too many actual parameters
+C:\Users\pc\Desktop\DataStruct\Queue\main.c(13,14): warning C4020: 'Enqueue': too many actual parameters
+  Queue.vcxproj -> C:\Users\pc\Desktop\DataStruct\x64\Debug\Queue.exe
