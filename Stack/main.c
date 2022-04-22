@@ -1,55 +1,36 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-#include "CLinkedList.h"
+#include "InfixToPostfix.h"
+#include "PostCalculator.h"
+#include <string.h>
 
 int main()
 {
-	List list;
-	Data data;
-	ListInit(&list);
+	char exp1[] = "1+2*3";
+	char exp2[] = "(1+2)*3";
+	char exp3[] = "((1-2)+3)*(5-2)";
 
-	LInsert(&list, 1);
-	LInsert(&list, 2);
-	LInsert(&list, 3);
-	LInsert(&list, 4);
-	LInsert(&list, 5);
+	int cp1 = EvalInfixExp(exp1);
+	int cp2 = EvalInfixExp(exp2);
+	int cp3 = EvalInfixExp(exp3);
 
-	if (LFirst(&list, &data))
-	{
-		printf("%d ", data);
-		for (int i = 0; i < LCount(&list) - 1; ++i)
-		{
-			if (LNext(&list, &data))
-			{
-				printf("%d ", data);
-			}
-		}
-	}
+	ConvToRPNExp(exp1);
+	ConvToRPNExp(exp2);
+	ConvToRPNExp(exp3);
 
-	if (LFirst(&list, &data))
-	{
-		if (data == 2)
-			LRemove(&list);
-		for (int i = 0; i < 5; ++i)
-		{
-			if (LNext(&list, &data))
-			{
-				if (data == 2)
-					LRemove(&list);
-			}
-		}
-	}
+	printf("%s \n", exp1);
+	printf("%s \n", exp2);
+	printf("%s \n", exp3);
 
-	if (LFirst(&list, &data))
-	{
-		printf("%d ", data);
-		for (int i = 0; i < LCount(&list); ++i)
-		{
-			if (LNext(&list, &data))
-			{
-				printf("%d ", data);
-			}
-		}
-	}
 
+	int r1 = EvalRPNExp(exp1);
+	int r2 = EvalRPNExp(exp2);
+	int r3 = EvalRPNExp(exp3);
+	
+	printf("%d == %d\n", cp1, r1);
+	printf("%d == %d\n", cp2, r2);
+	printf("%d == %d\n", cp3, r3);
+
+	return 0;
 }
 

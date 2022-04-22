@@ -27,6 +27,18 @@
     <ClCompile Include="CLinkedList.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CLLBaseStack.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InfixToPostfix.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PostCalculator.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InfixCalculator.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArrayBaseStack.h">
@@ -36,6 +48,18 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CLinkedList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLLBaseStack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InfixToPostfix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PostCalculator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InfixCalculator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
