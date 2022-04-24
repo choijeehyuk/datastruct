@@ -140,10 +140,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.c" />
+    <ClCompile Include="PriorityQueue.c" />
     <ClCompile Include="SimpleHeap.c" />
+    <ClCompile Include="UsefulHeap.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="PriorityQueue.h" />
     <ClInclude Include="SimpleHeap.h" />
+    <ClInclude Include="UsefulHeap.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

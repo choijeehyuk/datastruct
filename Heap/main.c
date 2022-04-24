@@ -1,24 +1,31 @@
 #include <stdio.h>
-#include "SimpleHeap.h"
+#include "PriorityQueue.h"
+#include <string.h>
+
+int DataPriorityComp(char* ch1, char* ch2)
+{
+	return strlen(ch2) - strlen(ch1);
+}
 
 int main()
 {
-	Heap heap;
-	HeapInit(&heap);
+	PQueue pq;
+	PQueueInit(&pq, DataPriorityComp);
 
-	HInsert(&heap, 'A', 1);
-	HInsert(&heap, 'B', 2);
-	HInsert(&heap, 'C', 3);
-	printf("%c \n", HDelete(&heap));
+	PEnqueue(&pq, "22");
+	PEnqueue(&pq, "55555");
+	PEnqueue(&pq, "4444");
+	PEnqueue(&pq, "333");
 
-	HInsert(&heap, 'A', 1);
-	HInsert(&heap, 'B', 2);
-	HInsert(&heap, 'C', 3);
-	printf("%c \n", HDelete(&heap));
 
-	while (!HIsEmpty(&heap))
+	PEnqueue(&pq, "999999999");
+	PEnqueue(&pq, "666666");
+	PEnqueue(&pq, "88888888");
+	printf("%s \n", PDequeue(&pq));
+
+	while (!PQIsEmpty(&pq))
 	{
-		printf("%c \n", HDelete(&heap));
+		printf("%s \n", PDequeue(&pq));
 	}
 
 	return 0;
