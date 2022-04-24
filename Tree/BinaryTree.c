@@ -54,10 +54,21 @@ void InorderTraverse(BTreeNode* bt, VisitFuncPtr action)
 {
 	if (bt == NULL)
 		return;
+	
 
+	if (bt->left != NULL && bt->right != NULL)
+	{
+		action('(');
+	}
 	InorderTraverse(bt->left, action);
 	action(bt->data);
 	InorderTraverse(bt->right, action);
+
+	if (bt->left != NULL && bt->right != NULL)
+	{
+		action(')');
+	}
+
 }
 
 void PreorderTraverse(BTreeNode* bt, VisitFuncPtr action)

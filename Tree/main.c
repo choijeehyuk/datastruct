@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "BinaryTree.h"
+#include "ExpressionTree.h"
 
 void PrintBTD(BTData data)
 {
@@ -8,38 +9,22 @@ void PrintBTD(BTData data)
 
 int main()
 {
-	BTreeNode* bt1 = MakeBTreeNode();
-	BTreeNode* bt2 = MakeBTreeNode();
-	BTreeNode* bt3 = MakeBTreeNode();
-	BTreeNode* bt4 = MakeBTreeNode();
-	BTreeNode* bt5 = MakeBTreeNode();
-	BTreeNode* bt6 = MakeBTreeNode();
+	char exp[] = "325+*4*23*+";
+	BTreeNode* eTree = MakeExpTree(exp);
 
-	SetData(bt1, 1);
-	SetData(bt2, 2);
-	SetData(bt3, 3);
-	SetData(bt4, 4);
-	SetData(bt5, 5);
-	SetData(bt6, 6);
+	printf("Preorder expression : ");
+	ShowPrefixTypeExp(eTree);
+	printf("\n");
 
-	MakeLeftSubTree(bt1, bt2);
-	MakeRightSubTree(bt1, bt3);
-	MakeLeftSubTree(bt2, bt4);
-	MakeRightSubTree(bt2, bt5);
-	MakeLeftSubTree(bt3, bt6);
+	printf("Inorder expression : ");
+	ShowInfixTypeExp(eTree);
+	printf("\n");
 
-	DeleteTree(bt1);
+	printf("Postorder expression : ");
+	ShowPostfixTypeExp(eTree);
+	printf("\n");
 
-
-	//PreorderTraverse(bt1, PrintBTD);
-	//printf("\n");
-
-	//InorderTraverse(bt1, PrintBTD);
-	//printf("\n");
-
-	//PostorderTraverse(bt1, PrintBTD);
-	//printf("\n");
-
-
+	printf("expression result : %d", EvaluateExpTree(eTree));
+	
 	return 0;
 }
